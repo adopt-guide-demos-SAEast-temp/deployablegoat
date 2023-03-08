@@ -6,11 +6,6 @@ resource "aws_s3_bucket" "data" {
   bucket        = "${local.resource_prefix.value}-data"
   acl           = "public-read"
   force_destroy = true
-  tags = {
-    Name        = "${local.resource_prefix.value}-data"
-    Environment = local.resource_prefix.value
-    yor_trace   = "0c23f4fd-6fd9-4ed1-925f-6c1b13388837"
-  }
 }
 
 resource "aws_s3_bucket" "financials" {
@@ -20,11 +15,6 @@ resource "aws_s3_bucket" "financials" {
   bucket        = "${local.resource_prefix.value}-financials"
   acl           = "private"
   force_destroy = true
-  tags = {
-    Name        = "${local.resource_prefix.value}-financials"
-    Environment = local.resource_prefix.value
-    yor_trace   = "b1450859-3ab4-43db-b287-c19034fe0fbb"
-  }
 }
 
 resource "aws_s3_bucket" "operations" {
@@ -36,10 +26,4 @@ resource "aws_s3_bucket" "operations" {
     enabled = true
   }
   force_destroy = true
-  tags = {
-    Name        = "${local.resource_prefix.value}-operations"
-    Environment = local.resource_prefix.value
-    yor_trace   = "4534313c-6d0d-457d-b928-4c89689fb08a"
-  }
-
 }
