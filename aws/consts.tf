@@ -2,7 +2,7 @@
 data "aws_caller_identity" "current" {}
 
 variable "company_name" {
-  default = "adopt-guide-demos-SAEast-temp"
+  default = "adopt-guide-demos-saeast-temp"
 }
 
 variable "environment" {
